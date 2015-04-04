@@ -1,6 +1,6 @@
 (function () {
     //Nome de usuário de onde foi feito a cópia, assim você não precisa mudar tanta coisa.
-    var fork = "Yemasthui";
+    var fork = "motelbible";
 		
     //Definir função pela extensão do bot.
     function extend() {
