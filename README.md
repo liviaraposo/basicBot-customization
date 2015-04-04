@@ -3,39 +3,35 @@ basicBot-customization
 
 A not so basic bot for plug.dj 
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Yemasthui/basicBot?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) [![facebook group](http://i.bnzi.uk/97dW.svg)](https://facebook.com/groups/basicBot) [![twitter](http://i.bnzi.uk/4KEn.svg)](https://twitter.com/bscBt)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/motelbible/basicBot)
 
-Stay updated on **basicBot**'s development by following the project on Twitter [@bscBt](http://twitter.com/bscBt)
+Criado por [Yemasthui](https://github.com/Yemasthui) mas agora mantido por [Benzi](https://github.com/Benzi) e traduzido por [Motel Bible](https://github.com/motelbible)
 
-Created by [Yemasthui](https://github.com/Yemasthui) but now maintained by [Benzi](https://github.com/Benzi).
-
-(You can email me via hi@benzi.io or send me a message on [Gitter](https://gitter.im/Benzi) if you have any queries about the bot)
+(Você pode me mandar uma mensagem no [Gitter](https://gitter.im/motelbible) se tiver alguma dúvida ou problema com o bot)
 
 ---
 
-Click [here](https://github.com/Yemasthui/basicBot) for basicBot's main repository.
+Clique [aqui](https://github.com/Yemasthui/basicBot) para visitar o repositório oficial do basicBot.
 
-Using custom room settings or adding functionality is done by loading your own script loading and modifying the bot.
-This repository's purpose is to facilitate this. You can fork the repository and customise [the example script](https://github.com/Yemasthui/basicBot-customization/blob/master/extension.js). 
-When you have forked the repo, bookmark the following script, __but change _Yemasthui_ to your own github handle__. 
+Usar configurações personalizadas ou adicionar funcionalidades é feito através do carregamento do seu próprio script e modificação do bot.
+O propósito deste repositório é para facilitar isso. Você pode fazer uma cópia (fork) deste repositório e customizar o [o exemplo](https://github.com/motelbible/basicBot-customization/blob/master/extension.js). 
+Quando você tiver copiado o repositório, salve o seguinte script na barra de favoritos do seu navegador, __mas substitua _motelbible_ por seu nome de usuário do github__. 
 
-`javascript:(function(){$.getScript('https://rawgit.com/Yemasthui/basicBot-customization/master/extension.js');})();`
+`javascript:(function(){$.getScript('https://rawgit.com/motelbible/basicBot-customization/master/extension.js');})();`
 
-If you are using your own hosting service for your script, swap the link with your own.
+Se você usa algum serviço de hospedagem para seu script, troque o link pelo seu próprio.
 
-A detailed overview of the possible settings can be found [here](https://github.com/Yemasthui/basicBot-customization/blob/master/settingsOverview.md).
-
-(A custom .json file can still be used for custom file settings, but is discouraged as the method provided here allows for more customization.)
+Uma visão detalhada das possíveis configurações podem ser encontradas [aqui](https://github.com/motelbible/basicBot-customization/blob/master/settingsOverview.md).
 
 ###Blacklists###
 
-Blacklists can be added in the settings through either links to raw json files with the same format as those in the examples provided (forking and using [rawgit's development link](https://rawgit.com/) is a great way to do this),
-or replacing the link with a custom function that loads your lists into the bot (this option requires extensive knowledge of javascript and a good understanding of the bot's inner workings).
+Blacklists podem ser adicionadas nas configurações para os links através do arquivo .json com o mesmo formato nos exemplos dados (copiando e usando o [link de desenvolvimento do rawgit](https://rawgit.com/) é, também, uma boa maneira de fazer isto),
+ou substituindo o link com uma função personalizada que carrega sua lista no bot (essa opção requer conhecimento em javascript e bom entendimento das funções dentro do bot).
 
-To update your lists manually, you can use the details specified in chat messages after a song is blacklisted, or use either of these in the console periodically:
+Para atualizar sua lista manualmente, você pode usar os detalhes especificados no chat depois que a música for listada como "proibida", ou use um dos comandos no 'console' periodicamente:
 ```javascript
-bot.getNewBlacklistedSongs(); //get a javascript object
-bot.logNewBlacklistedSongs(); //get a list
+bot.getNewBlacklistedSongs(); //Carrega objeto
+bot.logNewBlacklistedSongs(); //Carrega a lista
 ```
 
 
