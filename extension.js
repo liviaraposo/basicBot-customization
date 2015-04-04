@@ -1,23 +1,23 @@
 (function () {
-    //Link location of your fork so you don't have to modify so many things.
+    //Nome de usuário de onde foi feito a cópia, assim você não precisa mudar tanta coisa.
     var fork = "Yemasthui";
 		
-    //Define our function responsible for extending the bot.
+    //Definir função pela extensão do bot.
     function extend() {
-        //If the bot hasn't been loaded properly, try again in 1 second(s).
+        //Se o bot não iniciou corretamente, tente novamente 1 segundo depois.
         if (!window.bot) {
             return setTimeout(extend, 1 * 1000);
         }
 
-        //Precaution to make sure it is assigned properly.
+        //Precaução para ter certeza de que foi atribuido corretamente.
         var bot = window.bot;
 
-        //Load custom settings set below
+        //Carregar configurações personalizadas abaixo. ↓
         bot.retrieveSettings();
 
         /*
-         Extend the bot here, either by calling another function or here directly.
-         Model code for a bot command:
+         Extenda o bot aqui, ou criando uma nova função ou aqui diretamente.
+         Modelo de código para um comando do bot:
 
          bot.commands.commandCommand = {
          command: 'cmd',
@@ -27,7 +27,7 @@
          if(this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
          if( !bot.commands.executable(this.rank, chat) ) return void (0);
          else{
-         //Commands functionality goes here.
+         //Funcionalidade do comando vem aqui.
          }
          }
          }
@@ -35,10 +35,9 @@
          */
 
         bot.commands.baconCommand = {
-            command: 'bacon',  //The command to be called. With the standard command literal this would be: !bacon
-            rank: 'user', //Minimum user permission to use the command
-            type: 'exact', //Specify if it can accept variables or not (if so, these have to be handled yourself through the chat.message
-            functionality: function (chat, cmd) {
+            command: 'bacon',  //Comando a ser chamado. Com o comando padrão literal, seria: !bacon
+            rank: 'user', //Permissão mínima para usar o comando
+            type: 'exact', //Especificar se o comando aceita variáveis ou não (se sim, você terá de configura-las você mesmo pelo chat.message           functionality: function (chat, cmd) {
                 if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                 if (!bot.commands.executable(this.rank, chat)) return void (0);
                 else {
@@ -47,20 +46,20 @@
             }
         };
 
-        //Load the chat package again to account for any changes
+        //Carregar o pacote do chat novamente para registrar todas as mudanças
         bot.loadChat();
 
     }
 
-    //Change the bots default settings and make sure they are loaded on launch
+    //Mudar as configurações padrões do bot e ter certeza que elas foram carregadas corretamente
 
     localStorage.setItem("basicBotsettings", JSON.stringify({
         botName: "basicBot",
-        language: "english",
+        language: "portuguese",
         startupCap: 1, // 1-200
         startupVolume: 0, // 0-100
-        startupEmoji: false, // true or false
-        chatLink: "https://rawgit.com/" + fork + "/basicBot/master/lang/en.json",
+        startupEmoji: false, // true ou false
+        chatLink: "https://rawgit.com/" + fork + "/basicBot/master/lang/pt.json",
         maximumAfk: 120,
         afkRemoval: true,
         maximumDc: 60,
@@ -80,19 +79,19 @@
         usercommandsEnabled: true,
         lockskipPosition: 3,
         lockskipReasons: [
-            ["theme", "This song does not fit the room theme. "],
-            ["op", "This song is on the OP list. "],
-            ["history", "This song is in the history. "],
-            ["mix", "You played a mix, which is against the rules. "],
-            ["sound", "The song you played had bad sound quality or no sound. "],
-            ["nsfw", "The song you contained was NSFW (image or sound). "],
-            ["unavailable", "The song you played was not available for some users. "]
+        	["tema", "A música não se encaixa nos padrões da sala. "],
+        	["op", "Essa música está na lista OP. "],
+        	["historico", "A música ainda está no histórico. "],
+        	["mix", "Você tocou um mix (muito longo) - não permitido. "],
+        	["som", "A música que você tocou tinha má qualidade ou estava sem som. "],
+        	["nsfw", "A música que você tocou é NSFW (impróprio). "],
+        	["indisponivel", "A música que você tocou está indisponível. "]
         ],
         afkpositionCheck: 15,
         afkRankCheck: "ambassador",
         motdEnabled: false,
         motdInterval: 5,
-        motd: "Temporary Message of the Day",
+        motd: "Mensagem temporária do dia",
         filterChat: true,
         etaRestriction: false,
         welcome: true,
@@ -112,7 +111,7 @@
         }
     }));
 
-    //Start the bot and extend it when it has loaded.
+    //Inicia o bot e o extende quando for completamente carregado.
     $.getScript("https://rawgit.com/Yemasthui/basicBot/master/basicBot.js", extend);
 
 }).call(this);
