@@ -34,18 +34,6 @@
 
          */
 
-        bot.commands.baconCommand = {
-            command: 'bacon',  //Comando a ser chamado. Com o comando padrão literal, seria: !bacon
-            rank: 'user', //Permissão mínima para usar o comando
-            type: 'exact', //Especificar se o comando aceita variáveis ou não (se sim, você terá de configura-las você mesmo pelo chat.message           functionality: function (chat, cmd) {
-                if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                if (!bot.commands.executable(this.rank, chat)) return void (0);
-                else {
-                    API.sendChat("/me Bacon!!!");
-                }
-            }
-        };
-
         //Carregar o pacote do chat novamente para registrar todas as mudanças
         bot.loadChat();
 
