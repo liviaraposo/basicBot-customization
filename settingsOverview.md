@@ -1,21 +1,21 @@
 Roomsettings
 ============
 
-Settings explained
-------------------
+Configurações detalhadas
+------------------------
 
-Try to keep numbers integers: no decimals. 
-Strings go between " ", if you want to use " in your string, use \". 
-Booleans are either 'true' or 'false', without the '.
+Tente manter números inteiros: sem decimais. 
+Strings (valores) vão dentro de aspas " ", se você quiser usar uma aspa " dentro do valor, use \". 
+Booleans (variáveis) sempre serão 'true' ou 'false', sem o '.
 
-- "language": choose one of the supported language packs, if no valid language is found, it will use the standard pack or a specified pack, type: string
-- "chatLink": link to a json file containing a translated chat pack, type: string
-- "maximumAfk": the amount of minutes a user can be afk for the afkCheck if it's enabled, type: a number
-- "afkRemoval": turn afkCheck on or off, type: boolean             
-- "maximumDc": users that disconnected not longer than this amount of minutes ago, can get their spot back, type: a number 
-- "bouncerPlus": turn the bouncer+ mode on or off, type: boolean                
-- "lockdownEnabled": turn lockdown on or off, lockdown means that only staff can chat, leave it false                
-- "lockGuard": turn the lockguard on or off, lockguard makes sure the waitlist isn't locked longer than the maximum allowed time, type: a boolean: true/false
+- "language": escolha um dos pacotes de idiomas suportados. Se nenhum idioma válido for encontrado, ele usará o pacote padrão ou um pacote especificado. Tipo: string
+- "chatLink": link de um arquivo .json contendo um pacote de idioma. Tipo: string
+- "maximumAfk": quantidade em minutos que um usuário pode permanecer inativo na comunidade se o afkCheck estiver habilitado. Tipo: número
+- "afkRemoval": Liga/desliga afkCheck. Tipo: boolean             
+- "maximumDc": quantidade em minutos que um usuário pode usar dclookup depois de ter sido desconectado da comunidade. Tipo: número 
+- "bouncerPlus": Liga/desliga o modo bouncer+.Tipo: boolean                
+- "lockdownEnabled": Liga/desliga lockdown. Lockdown significa que somente a staff pode conversar no chat (deixe como falso).                
+- "lockGuard": Liga/desliga lockguard. Lockguard garante que a fila de espera não fica travada por mais tempo que o permitido. Tipo: boolean: true/false
 - "maximumLocktime": maximum time the waitlist can be locked if lockguard is enabled, type: a number                
 - "cycleGuard": turn the cycleguard on or off, cycleguard makes sure DJ cycle isn't on longer than the allowed amount of minutes, type: boolean
 - "maximumCycletime": maximum time DJ cycle can be enabled if cyleguard is enabled, type: a number                
