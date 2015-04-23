@@ -1,7 +1,7 @@
 basicBot-customization
 ======================
 
-A not so basic bot for plug.dj 
+Um bot não tão básico para o plug.dj 
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/motelbible/basicBot)
 
