@@ -46,6 +46,19 @@
                 }
             }
         };*/
+        
+        bot.commands.testCommand = {
+            command: ['test'], //Exemplo de comando
+            rank: 'user', //user/bouncer/mod/manager
+            type: 'exact',
+            functionality: function (chat, cmd) {
+                if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                if (!bot.commands.executable(this.rank, chat)) return void (0);
+                else {
+                    API.sendChat("/me 1, 2, 3... testando"); // Mensagem a ser enviada no chat
+                }
+            }
+        };
 
         //Carregar o pacote do chat novamente para registrar todas as mudanças
         bot.loadChat();
