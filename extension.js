@@ -15,7 +15,8 @@
         //Carregar configurações personalizadas abaixo. ↓
         bot.retrieveSettings();
 
-        /*bot.commands.cookieCommand.cookies =['deu-lhe um biscoito de chocolate!',
+        /*
+        bot.commands.cookieCommand.cookies =['deu-lhe um biscoito de chocolate!',
                     'deu-lhe um biscoito de aveia caseiro macio!',
                     'deu-lhe um biscoito podre e sujo. Era o último do pacote. Que nojo!',
                     'deu-lhe um bolinho de açúcar... O quê? Sem estrelinhas e povilho? Eu não tocaria.',
@@ -34,18 +35,7 @@
                     'deu-lhe um biscoito que foi esquecido na chuva... eu não comeria.',
                     'te trouxe biscoitos fresquinhos... parecem deliciosos!'
                 ];
-                bot.commands.cookieCommand = {
-            command: 'cookie',
-            rank: 'user',
-            type: 'exact',
-            functionality: function (chat, cmd) {
-                if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                if (!bot.commands.executable(this.rank, chat)) return void (0);
-                else {
-                    
-                }
-            }
-        };*/
+        */
         
         bot.commands.testCommand = {
             command: ['test'], //Exemplo de comando
