@@ -26,6 +26,7 @@ Booleans (variáveis) sempre serão 'true' ou 'false', sem o '.
 - "usercommandsEnabled": ativa/desativa os comandos para usuários. Tipo: boolean                
 - "lockskipPosition": a posição para qual !lockskip moverá usuários na fila de espera. Tipo: número
 - "lockskipReasons": possíveis razões para adicionar ao comando !lockskip. Formato como abaixo:
+
     	```
     	[
     		["razão1", "explicação1"],
@@ -34,6 +35,7 @@ Booleans (variáveis) sempre serão 'true' ou 'false', sem o '.
     		["razãoX", "explicaçãoX"]
     	]
     	```
+    	
 - "afkpositionCheck": somente usuários abaixo da posição na fila de espera serão avaliados por inatividade. Tipo: número
 - "afkRankCheck": somente pessoas com o rank especificado (e/ou abaixo) serão verificadas por inatividade. Possíveis ranks: 
 	"user", "residentdj", "bouncer", "manager", "cohost", "host", "ambassador", "admin"
