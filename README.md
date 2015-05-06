@@ -3,7 +3,7 @@ basicBot-customization
 
 Um bot não tão básico para o plug.dj 
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/motelbible/basicBot)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/motelbible/basicBot-customization)
 
 Criado por [Yemasthui](https://github.com/Yemasthui) mas agora mantido por [Benzi](https://github.com/Benzi) e traduzido por [Motel Bible](https://github.com/motelbible)
 
