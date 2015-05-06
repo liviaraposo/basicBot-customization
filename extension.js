@@ -1,6 +1,6 @@
 (function () {
     //Nome de usuário de onde foi feito a cópia, assim você não precisa mudar tanta coisa.
-    var fork = "motelbible";
+    var fork = "yemasthui";
 		
     //Definir função pela extensão do bot.
     function extend() {
@@ -116,6 +116,6 @@
     }));
 
     //Inicia o bot e o extende quando for completamente carregado.
-    $.getScript("https://rawgit.com/motelbible/basicBot/master/basicBot.js", extend);
+    $.getScript("https://rawgit.com/" + fork + "/basicBot/master/basicBot.js", extend);
 
 }).call(this);
