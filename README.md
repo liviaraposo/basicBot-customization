@@ -1,8 +1,6 @@
 basicBot-customization
 ======================
 
-[![Join the chat at https://gitter.im/motelbible/basicBot-customization](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/motelbible/basicBot-customization?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 Um bot não tão básico para o plug.dj 
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/motelbible/basicBot-customization)
