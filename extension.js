@@ -33,7 +33,7 @@
                     'deu-lhe um Oreo e um copo de leite.',
                     'deu-lhe um biscoito de arco-íris feito com amor :heart:',
                     'deu-lhe um biscoito que foi esquecido na chuva... eu não comeria.',
-                    'te trouxe biscoitos fresquinhos... parecem deliciosos!'
+                    'te trouxe biscoitos fresquinhos... parecem um lixo!'
                 ];
         */
         
@@ -58,7 +58,7 @@
     //Mudar as configurações padrões do bot e ter certeza que elas foram carregadas corretamente
 
     localStorage.setItem("basicBotsettings", JSON.stringify({
-        botName: "Lili Bot",
+        botName: "Sea Bot",
         language: "portuguese",
         startupCap: 1, // 1-200
         startupVolume: 0, // 0-100
@@ -66,7 +66,7 @@
         chatLink: "https://rawgit.com/" + fork + "/basicBot/master/lang/pt.json",
         maximumAfk: 120,
         afkRemoval: true,
-        maximumDc: 60,
+        maximumDc: 65,
         bouncerPlus: true,
         blacklistEnabled: true,
         lockdownEnabled: false,
@@ -75,7 +75,7 @@
         cycleGuard: true,
         maximumCycletime: 10,
         voteSkip: false,
-        voteSkipLimit: 10,
+        voteSkipLimit: 6,
         timeGuard: true,
         maximumSongLength: 8,
         autodisable: true,
@@ -98,7 +98,7 @@
         motd: "",
         filterChat: true,
         etaRestriction: false,
-        welcome: Welcome/Bem vindo! %u,
+        welcome: Welcome/Bem vindo! =[,
         opLink: null,
         rulesLink: Regras aqui! https://attachment.fbsbx.com/file_download.php?id=1601180993495159&eid=ASst_Efv-SLfhLvkR2JA-BmocpxFlbov36QkFMBTGN2HnHtRvOgEZnO3eeyYTrm7RNA&inline=1&ext=1433359020&hash=AStXonmQvc1006o9,
         themeLink: null,
