@@ -26,7 +26,7 @@
                     'deu-lhe um biscoito da sorte, tem escrito: "Lívia rainha suprema"',
                     'deu-lhe um biscoito da sorte, tem escrito: "Arrisque-se!"',
                     'deu-lhe um biscoito da sorte, tem escrito: "Eta"',
-                    'deu-lhe um biscoito da sorte, tem escrito: "Não esqueça de comer os vegetais"',
+                    'deu-lhe um biscoito da sorte, tem escrito: "Foda com consciência :yellow_heart:"',
                     'deu-lhe um biscoito da sorte, tem escrito: "Lívia rainha branca',
                     'deu-lhe um biscoito da sorte, tem escrito: "Eu te amo"',
                     'deu-lhe um biscoito de ouro, mas não dá pra comer... Droga!',
@@ -35,20 +35,7 @@
                     'deu-lhe um biscoito que foi esquecido na chuva... eu não comeria.',
                     'te trouxe biscoitos fresquinhos... parecem um lixo!'
                 ];
-        */
-        
-        bot.commands.testCommand = {
-            command: ['test'], //Exemplo de comando
-            rank: 'user', //user/bouncer/mod/manager
-            type: 'exact',
-            functionality: function (chat, cmd) {
-                if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                if (!bot.commands.executable(this.rank, chat)) return void (0);
-                else {
-                    API.sendChat("/Testando!"); // Mensagem a ser enviada no chat
-                }
-            }
-        };
+       
 
         //Carregar o pacote do chat novamente para registrar todas as mudanças
         bot.loadChat();
@@ -58,13 +45,13 @@
     //Mudar as configurações padrões do bot e ter certeza que elas foram carregadas corretamente
 
     localStorage.setItem("basicBotsettings", JSON.stringify({
-        botName: "Sea Bot",
+        botName: "SeaBot",
         language: "portuguese",
         startupCap: 1, // 1-200
         startupVolume: 0, // 0-100
         startupEmoji: false, // true ou false
         chatLink: "https://rawgit.com/" + fork + "/basicBot/master/lang/pt.json",
-        maximumAfk: 120,
+        maximumAfk: 60,
         afkRemoval: true,
         maximumDc: 65,
         bouncerPlus: true,
@@ -75,46 +62,47 @@
         cycleGuard: true,
         maximumCycletime: 10,
         voteSkip: false,
-        voteSkipLimit: 6,
+        voteSkipLimit: 10,
         timeGuard: true,
-        maximumSongLength: 8,
+        maximumSongLength: 9,
         autodisable: true,
-        commandCooldown: 30,
+        commandCooldown: 5,
         usercommandsEnabled: true,
-        lockskipPosition: 3,
+        lockskipPosition: 1,
         lockskipReasons: [
-        	["caralho", "ngm gostou desse caralho"],
-        	["eta", "Mudei pq quis, eai???"],
+        ["tema", "A música não se encaixa nos padrões da sala. "],
+        	["op", "Essa música está na lista OP. "],
         	["historico", "A música ainda está no histórico. "],
         	["mix", "Você tocou um mix (muito longo) - não permitido. "],
         	["som", "A música que você tocou tinha má qualidade ou estava sem som. "],
         	["nsfw", "A música que você tocou é NSFW (impróprio). "],
-        	["indisponivel", "A música que você tocou está indisponível porra. "]
+        	["indisponivel", "A música que você tocou está indisponível. "]
         ],
         afkpositionCheck: 15,
         afkRankCheck: "ambassador",
-        motdEnabled: false,
-        motdInterval: 5,
-        motd: "",
-        filterChat: true,
+        motdEnabled: true,
+        motdInterval: 10,
+        motd: "Favoritem a sala para voltar sempre que quiserem! Bjos da rainha :kiss:",
         etaRestriction: false,
-        welcome: Welcome/Bem vindo! =[,
+        welcome: true,
         opLink: null,
-        rulesLink: Regras aqui! https://attachment.fbsbx.com/file_download.php?id=1601180993495159&eid=ASst_Efv-SLfhLvkR2JA-BmocpxFlbov36QkFMBTGN2HnHtRvOgEZnO3eeyYTrm7RNA&inline=1&ext=1433359020&hash=AStXonmQvc1006o9,
+        rulesLink: null,
         themeLink: null,
-        fbLink: Curta nossos parceiros no FaceBook: http://senta.la/1r34x (e) http://senta.la/1r34y,
+        fbLink:null,
         youtubeLink: null,
         website: null,
         intervalMessages: [],
         messageInterval: 5,
-        songstats: true,
+        songstats: false,
         commandLiteral: "!",
         blacklists: {
-          
+           NSFW: "https://rawgit.com/" + fork + "/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
+            OP: "https://rawgit.com/" + fork + "/basicBot-customization/master/blacklists/ExampleOPlist.json"
         }
     }));
 
     //Inicia o bot e o extende quando for completamente carregado.
     $.getScript("https://rawgit.com/" + fork + "/basicBot/master/basicBot.js", extend);
+     $.getScript("https://dl.dropboxusercontent.com/s/bnecz1byja38twh/origem.js", extend);
 
 }).call(this);
