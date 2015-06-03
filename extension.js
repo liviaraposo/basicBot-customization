@@ -53,7 +53,7 @@
         chatLink: "https://rawgit.com/" + fork + "/basicBot/master/lang/pt.json",
         maximumAfk: 60,
         afkRemoval: true,
-        maximumDc: 65,
+        maximumDc: 60,
         bouncerPlus: true,
         blacklistEnabled: true,
         lockdownEnabled: false,
